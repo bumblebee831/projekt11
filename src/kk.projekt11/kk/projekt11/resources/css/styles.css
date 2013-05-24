@@ -5619,12 +5619,20 @@ p {
   background: #339900 !important;
 }
 #site-footer {
-  background: #858387;
+  background: #333333;
   color: white;
   font-size: 14px;
 }
-#site-footer address {
-  font-size: 14px;
+#site-footer h2 {
+  font-size: 23.8px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+}
+#site-footer ul {
+  list-style-type: none;
+  margin-left: 0;
+  margin-bottom: 25px;
 }
 #site-footer .center {
   margin-top: 75px;

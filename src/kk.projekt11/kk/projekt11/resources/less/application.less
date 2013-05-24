@@ -375,12 +375,21 @@ p {
 
 
 #site-footer {
-  background: #858387;
+  background: @gray-dark;
   color: white;
   font-size: @font-size-small;
 
-  address {
-    font-size: @font-size-small;
+ h2 {
+    font-size: @font-size-small * 1.7;
+    margin-top: @line-height-base;
+    margin-bottom: @line-height-base;
+    text-transform: uppercase;
+  }
+
+  ul {
+    list-style-type: none;
+    margin-left: 0;
+    margin-bottom: @line-height-base;
   }
 
   .center {
