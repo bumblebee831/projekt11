@@ -29,6 +29,11 @@ body {
   border-bottom: 10px solid @brand-primary;
 }
 
+ul, ol {
+    margin: 0 0 0 @line-height-base;
+    padding: 0;
+}
+
 dd {
     margin-left: 0px;
 }
@@ -60,10 +65,14 @@ p {
 }
 
 .container {
-  max-width: 960px;
+  max-width: 940px;
   margin: 0px auto;
   border: 0px solid red;
-  padding: @line-height-base / 2;
+  padding: 0;
+}
+
+.carousel-front {
+
 }
 
 .row {
@@ -78,41 +87,38 @@ p {
 .navbar-toggle {
   margin-bottom: @line-height-base * 4 !important;
   border: 0px solid red;
+  background: @brand-primary;
 }
 
 .navbar {
-    background-color: transparent;
-    border-radius: 0;
-    margin-bottom: 20px;
+    background:url(../img/bg-nav.png)  no-repeat left top transparent;
+    border: 0px solid red;
+    margin-top: -20px !important;
+    margin-bottom: @line-height-base / 2;
     padding: 0;
     position: relative;
 }
 
 .navbar .nav {
-  background-color: transparent;
-  border-radius: 0;
-  padding: 0;
-  position: relative;
-  margin-top: @line-height-base * 4.3;
+  width: 100%;
+  margin-top: -25px !important;
+  border-radius: @border-radius-base;
 }
 
-.navbar .nav {
-  background:url(../img/bg-nav.png)  no-repeat left top transparent;
-  width: 100%;
-  margin-top: -20px !important;
+.navbar .nav ul {
+  padding: 0px;
 }
 
 .navbar .nav > li {
-  margin: 0px 0px @line-height-base / 4 0px;
+  margin: 0px;
   text-align: left !important;
-  background: @brand-primary;
-  padding: @line-height-base / 5 0px @line-height-base / 5 0!important;
-
+  background: transparent;
+  padding: 0;
+  border: 0px solid red;
 }
 
 .navbar .nav > li > a {
   color: white;
-  font-weight: bold;
   text-transform: uppercase;
   font-size: @font-size-base;
 }
@@ -141,8 +147,8 @@ p {
 }
 
 .selected a {
-  color: white;
-  background: @brand-primary;
+  color: black !important;
+  //background: @brand-primary;
 }
 
 #breadcrumbs {
@@ -219,26 +225,10 @@ p {
 
 #content {
   border: 0px solid red;
-  background:url(../img/transparent.png)  repeat left top transparent;
+  background: white !important;
   margin-top: 0;
   border-radius: 5px;
   padding: @line-height-base;
-}
-
-.subsection-theaterstuecke {
-
-#content {
-  border: 0px solid red;
-  background: transparent;
-  margin-top: 0;
-  border-radius: 5px;
-  padding: 0;
-}
-
-.documentFirstHeading {
-  display: none;
-}
-
 }
 
 .item {
