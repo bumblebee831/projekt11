@@ -12,12 +12,6 @@
 @line-height-base:        25px;
 
 
-// Example for providing a data image via stylesheet
-// Add this class to any element to provide some extend of visual noise
-.make-some-noise {
-    background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQAQMAAAC032DuAAAABlBMVEUAAAAAAAClZ7nPAAAAAnRSTlMACHhIRQoAAAN7SURBVCiRAXADj/wAAkQJcM1mLQnAjAAb4sEhBjkWRBpWAIKF/FlkjVDJKKgA0KxA5QFOFWKpQgBG5PjjxiiDVJtnAHD5UwQVQstA7u8AOAYIMPmwiKga2gBooyeQA+jdVxiNABAIYGkr3lgTDBsAXQBAcGFmEGFEXQAwUgJEk6SsEMjDAApsetkgJK9PKJQAfDApaQUONGIDEgAKpcRsXsojEuY1ACYN4xSjdyGRVLcAsCBxpEiAUIkwYgBGLNoX24Yj9iJRAGMGy8gopJFOQvkAEZgtO9HAJC+9WACKQEJCwJGqpRoIAKYmUxdgMdl89AIApMRLQ/2pQLVbBQBDTLPsYJCDUEjoAHzhwoxoCKB4DAgAAN6ASuQFERMyvQCzWAJoFpkGjFsGAGLQnTrBTH4zIKIAFGUFG3UALzJDiwCmsCEwxUDwgFgIAFi/LtLBIAUJNBEAE4TENLhU8TjOCgAtAYILmwxnJrBoAAhNyenNNwViQFkANAFOhHKUo84QUAD0DRiji8DNOMJqADHrmeMWgFAgRrQAmIm9A9EhEGSBSgAulqWIGymRfxpwAH0DAAQSAnKWgdQASeJNibLEQzNOZwBzyCNrQnAEFoQoAAxMomBElggSqkgAAwFV5OAQZJ28ZwCCFaFCjSWxAObRAB8AJgRUj4BKIygApBGgk0MCkUMxFADVwIDCBY+OdMWgAG1xdOROdABshSMACAFX0QKD4hVCgwB2Mh6ZnAco8kNpAHsI4C8RY9CIiewAqyAZg6UNgAz7mgBkAxCbD25svIhqACgzbQNxciGqYNQAkARc2iVSMJ2lZADNJknADN80kC5jAOOUE5OONKUAsA0ARQLA1ABqDAEQCACIlnFgRPrqeUQyAKkAOV/GAUgi1RAAeAIX22Pv4uTlJABvEiKL1OBOaIWIAEsoNPRyRGQcMM0AQmzLIn0jGg0gNAAqsAQfVSb/NB1UAAi0AywKJQUIjCoA85ksYPNtqJExcQAYgoDzhYBwbWAdAKsgPswqlOqHbJMAUQlvpxLB1UzAGABpyxQ0mCs81wNXACHgmQEVxF1T9FUA8jrxkbDXWRJhoQBgoSwOksFRSSibACNkCSFowJxiMBYA4ek2cwRDk1DM8wCQCsQXTxHsamgRAEGGIlVQmcLwKhUAG+wigJjtKYW0HQC0OKRNEGFqXIOAbRpCReUGtgIAAAAASUVORK5CYII=);
-}
-
 // Use web-font as a lorem ipsum replacement - add class "wireframed" to make
 // blocks of text act as a placeholder
 .wireframed {
@@ -28,64 +22,344 @@
 
 // Application specific styles 
 
+
 body {
-    //background: #f5f5f5;
+  background: transparent;
 }
 
-// Example styles for a custom editbar override of the basic
-// twitter bootstarp navbar to make the edit bar look like a
-// browser toolbar
-body > header {
+dd {
+    margin-left: 0px;
+}
+dt, dd {
+    line-height: @line-height-base;
+}
+
+dl {
     margin-bottom: @line-height-base;
-    #toolbar + nav {
-        margin-top: @navbar-height;
-        .navbar-inner {
-            border-radius:0px;
-        }
+}
+
+.wrapper {
+  width: 100%;
+}
+
+
+
+h1, h2, h3 {
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+a {
+  outline: none !important;
+}
+
+p {
+    margin: 0px 0px @line-height-base 0px ;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0px auto;
+  border: 0px solid red;
+  padding: @line-height-base / 2;
+}
+
+.row {
+  border: 0px solid red;
+}
+
+
+#side {
+
+}
+
+.navbar-toggle {
+  margin-bottom: @line-height-base * 4 !important;
+  border: 0px solid red;
+}
+
+.navbar {
+    background-color: transparent;
+    border-radius: 0;
+    margin-bottom: 20px;
+    padding: 0;
+    position: relative;
+}
+
+.navbar .nav {
+  background-color: transparent;
+  border-radius: 0;
+  padding: 0;
+  position: relative;
+  margin-top: @line-height-base * 4.3;
+}
+
+.navbar .nav {
+  background:url(../img/bg-nav.png)  no-repeat left top transparent;
+  width: 100%;
+  margin-top: -20px !important;
+}
+
+.navbar .nav > li {
+  margin: 0px 0px @line-height-base / 4 0px;
+  text-align: left !important;
+  background: @brand-primary;
+  padding: @line-height-base / 5 0px @line-height-base / 5 0!important;
+
+}
+
+.navbar .nav > li > a {
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: @font-size-base;
+}
+
+.navbar .nav > li > a:hover {
+  color: black;
+  background: transparent;
+}
+
+.brand {
+  border: 0px solid red;
+  line-height: @line-height-base;
+  width: 425px;
+  padding: 0;
+  margin:  @line-height-base 0 0 0;
+}
+
+.section-text-will-toene .selected {
+  background:  @brand-twt !important; 
+}
+.section-fakstheater .selected {
+  background: @brand-faks !important;
+}
+.section-andraerecords .selected {
+  background: @brand-andrae !important;
+}
+
+.selected a {
+  color: white;
+  background: @brand-primary;
+}
+
+#breadcrumbs {
+  font-size: @font-size-small - 2;
+  padding: @line-height-base / 2 0;
+}
+
+#edit-bar {
+  display: inline-block;
+  padding: @line-height-base / 2;
+  width: 100%;
+  background: #999;
+  font-size: @font-size-small;
+}
+
+#sub {
+  border: 0px solid red;
+  margin-bottom: @line-height-base;
+
+}
+
+
+#content #viewlet-above-content-title {
+  display: none;
+}
+
+#content-views {
+  margin: 0px;
+}
+
+#brand {
+  padding:  @line-height-base / 2 @line-height-base @line-height-base @line-height-base;
+  display: inline-block;
+  width: 100%; 
+  border-radius: 0px 0px 5px 5px;
+}
+
+.section-text-will-toene #brand {
+  background:  @brand-twt; 
+}
+.section-fakstheater #brand {
+  background: @brand-faks;
+}
+.section-andraerecords #brand {
+  background: @brand-andrae;
+}
+
+.logo {
+  vertical-align: bottom;
+  border: 0px solid red;
+}
+
+.claim {
+  vertical-align: bottom !important;
+  border: 0px solid red;
+  text-transform: uppercase;
+  color: white;
+  font-size: @font-size-small - 1;
+  margin-top: @line-height-base * 2;
+  line-height: @line-height-base / 2;
+
+  a {
+    color: white;
+  }
+
+  a:hover {
+    text-decoration: none;
+  } 
+}
+
+#content {
+  border: 0px solid red;
+  background:url(../img/transparent.png)  repeat left top transparent;
+  margin-top: 0;
+  border-radius: 5px;
+  padding: @line-height-base;
+}
+
+.subsection-theaterstuecke {
+
+#content {
+  border: 0px solid red;
+  background: transparent;
+  margin-top: 0;
+  border-radius: 5px;
+  padding: 0;
+}
+
+.documentFirstHeading {
+  display: none;
+}
+
+}
+
+.item {
+  border: 0px solid red;
+  background:url(../img/transparent.png)  repeat left top transparent;
+  margin-top: 0;
+  margin-bottom: @line-height-base / 4; 
+  border-radius: 5px;
+  padding: @line-height-base;
+}
+
+.headline {
+  line-height: @line-height-base;
+}
+
+.summary {
+  color: black !important;
+  text-transform: uppercase;
+  font-size: @font-size-small * 2;
+}
+
+.documentFirstHeading {
+  text-transform: uppercase;
+  margin-bottom: @line-height-base;
+  font-size: @font-size-small * 2;
+}
+
+.description {
+  color: white !important;
+  margin-top: @line-height-base;
+  margin-bottom: @line-height-base;
+}
+
+
+.formControls {
+    background-color: #F5F5F5;
+    border-top: 1px solid #E5E5E5;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding: @line-height-base;
+}
+
+
+
+// PORTLET NAVIGATION
+
+.portletNavigationTree {
+    border: 0px solid red;
+
+    .portletHeader {
+      display: none;
+
     }
-    // Active nav items
-    #main-nav .selected > a,
-    #main-nav .selected > a:hover,
-    #main-nav .selected > a:focus {
-      color: @navbar-link-active-color;
-      text-decoration: none;
-      background-color: @navbar-link-active-bg;
-      -webkit-box-shadow: inset 0 3px 8px rgba(0,0,0,.125);
-         -moz-box-shadow: inset 0 3px 8px rgba(0,0,0,.125);
-              box-shadow: inset 0 3px 8px rgba(0,0,0,.125);
+
+    ul {
+       list-style: none;
+       padding: 0px 0px 0px 0px !important;
+       border: 0px solid red;
+       padding: 0;
+       margin: 0px !important;
+       text-align: left !important;
+       width: 60% !important; 
+    }
+
+    li {
+        margin: 0px 0px @line-height-base / 4 0px;
+        text-align: left !important;
+        width: 100% !important;
+        background: black;
+        padding: @line-height-base / 3 0px @line-height-base / 3 @line-height-base / 2 !important;
+        border-radius: 0px 5px 5px 0px;
+        
+
+        a {
+            font-size: @font-size-base + 3;
+            background: transparent;
+            text-align: left !important;
+            font-weight: bold;
+            border: 0px solid red;
+            color: white;
+        }
+
+        a:hover {
+            background: transparent;
+            text-decoration: none;
+            color: @gray-light !important;
+        }
+
+        span {
+            padding: 0px 0px 0px 0px !important;
+            text-align: left !important;
+            line-height: @line-height-base;
+        }    
+    }
+
+.navTreeCurrentItem span {
+    color: white !important;
+}
+
+    .contenttype-folder img,
+    .contenttype-formfolder img {
+        display: none;
     }
 }
 
-// Some eample styles for portlets
+.section-text-will-toene .navTreeCurrentNode {
+  background:  @brand-twt !important; 
+}
+.section-fakstheater .navTreeCurrentNode {
+  background: @brand-faks !important;
+}
+.section-andraerecords .navTreeCurrentNode {
+  background: @brand-andrae !important;
+}
 
-.portlet {
-  .portletHeader {
-    font-size: @font-size-base * 1.5;
-    padding: @padding-large;
-    border-bottom: 1px solid @grayLight;
-  }
-  .portletItem {
-    padding: @padding-large;
-  }
-  .portletFooter {
-    padding: @padding-large;
+
+
+#site-footer {
+  background: #858387;
+  color: white;
+  font-size: @font-size-small;
+
+  address {
     font-size: @font-size-small;
   }
-}
 
-// Example styles for listings (e.g. folder summary view)
-
-.tileItem {
-  .media();
-  .tileHeadline {
-    .media-heading();
+  .center {
+    margin-top: @line-height-base * 3;
   }
-}
-
-
-// Example styles for a HMTL5 based site footer
-body > footer {
-    margin-top: @line-height-base;
-    padding: @line-height-base 0;
-    border-top: 1px solid @grayLighter;
 }
