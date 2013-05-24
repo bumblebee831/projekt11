@@ -5448,6 +5448,9 @@ p {
   background: #999;
   font-size: 14px;
 }
+.actionMenuContent {
+  z-index: 100000 !important;
+}
 #sub {
   border: 0px solid red;
   margin-bottom: 25px;
@@ -5513,7 +5516,7 @@ p {
   border: 0px solid red;
   background: url(../img/transparent.png) repeat left top transparent;
   margin-top: 0;
-  margin-bottom: 6.25px;
+  margin-bottom: 0;
   border-radius: 5px;
   padding: 25px;
 }
@@ -5614,8 +5617,10 @@ p {
     -------------------------------------------------- */
 /* Carousel base class */
 .carousel {
-  margin-bottom: 60px;
-  margin-top: 200px;
+  margin-bottom: 25px;
+  margin-top: 0px;
+  border: 12.5px solid #ffffff;
+  border-radius: 5px;
 }
 .carousel .container {
   position: relative;
@@ -5623,29 +5628,39 @@ p {
 }
 .carousel-control {
   height: 80px;
-  margin-top: 200px;
+  margin-top: 125px;
   font-size: 120px;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
   background-color: transparent;
   border: 0;
   z-index: 10;
 }
+.carousel-control.left {
+  background: url(../img/left.png) no-repeat center center transparent !important;
+}
+.carousel-control.right {
+  background: url(../img/right.png) no-repeat center center transparent !important;
+  left: auto;
+  right: 0;
+}
 .carousel .item {
-  height: 500px;
+  height: 320px;
+  padding: 0;
 }
 .carousel img {
   position: absolute;
   top: 0;
   left: 0;
   min-width: 100%;
-  height: 500px;
+  height: 320px;
 }
 .carousel-caption {
   background-color: transparent;
   position: static;
-  max-width: 550px;
-  padding: 0 20px;
-  margin-top: 200px;
+  max-width: 660px;
+  padding: 25px;
+  margin: 12.5px auto;
+  border: 0px solid red;
 }
 .carousel-caption h1,
 .carousel-caption .lead {
