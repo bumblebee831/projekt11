@@ -53,6 +53,8 @@
 
         <!-- Logo (link target) -->
         <copy attributes="href" css:content="#portal-logo" css:theme="#logo" />
+        <!-- Edit bar -->
+        
 
         <!-- Site actions -->
         <!--<replace css:content="#portal-siteactions li" css:theme-children="#global-nav" />-->
@@ -64,6 +66,7 @@
         <!-- Global navigation -->
         <replace css:content="#portal-globalnav li"
             css:theme-children="#main-nav" />
+            <after css:content="#edit-bar" css:theme="#main-nav" />
 
         <!-- Breadcrumbs -->
         <replace css:content-children='#portal-breadcrumbs'
@@ -80,6 +83,7 @@
         <before css:content=".portalMessage" css:theme="#document-content" />
         <replace css:content-children="#viewlet-below-content"
             css:theme-children="#below-main-content" />
+
 
         <!-- Columns -->
         <replace css:content-children="#portal-column-one > *"
