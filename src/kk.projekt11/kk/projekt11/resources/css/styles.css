@@ -5340,7 +5340,9 @@ table.grid th {
   color: #555555;
 }
 body {
-  background: transparent;
+  background: url(../img/bg.png) repeat left top #f4f4f4;
+  border-top: 10px solid #7ca621;
+  border-bottom: 10px solid #7ca621;
 }
 dd {
   margin-left: 0px;
