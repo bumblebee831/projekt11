@@ -5479,6 +5479,10 @@ p {
   font-size: 12.307692307692307px;
   line-height: 16.666666666666668px;
 }
+.box .box-footer {
+  font-size: 13.333333333333334px;
+  text-transform: uppercase;
+}
 #content #viewlet-above-content-title {
   display: none;
 }
