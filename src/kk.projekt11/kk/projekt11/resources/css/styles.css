@@ -5457,6 +5457,24 @@ p {
   border: 0px solid red;
   padding: 25px 0;
 }
+#intro .col {
+  border: 0px solid red;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+#intro .first {
+  border: 0px solid red;
+  padding-right: 25px;
+}
+#intro .second {
+  border: 0px solid red;
+  padding-right: 15px;
+}
+#intro .last {
+  border: 0px solid red;
+  padding-right: 0px;
+  padding-left: 10px;
+}
 .box {
   padding: 12.5px;
   border: 0px solid red;
