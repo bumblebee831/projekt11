@@ -11,13 +11,6 @@
 <metal:content-core fill-slot="content-core">
 <metal:block define-macro="content-core">
 <div class="offer">
-      <div class="offer-back"
-          tal:define="context_state context/@@plone_context_state;
-                      parent context_state/parent;
-                      parent_url parent/absolute_url">
-            <a href="" tal:attributes="href parent_url">
-               &laquo; Zur&uuml;ck zur &Uuml;bersicht <span tal:content="parent/Title" /></a>
-      </div>
       <div class="offer-image">
     <tal:x tal:replace="structure python:context.tag(scale='custom')" />
   </div>
@@ -31,6 +24,11 @@
 <div class="offer-form">
   <div class="container">
     <div class="row">
+      <div class="col col-lg-12">
+
+      <h3>Sind Sie an diesem Produkt interessiert?</h3>
+      <p>Füllen Sie bitte unten stehendes Formular aus. Wir werden uns umgehend mit Ihnen in Verbindung setzen.</p>
+    </div>
 
       <div class="col col-lg-4">
         <div class="field">
@@ -109,6 +107,13 @@
     </div>
   </div>
   </div>
+  <div class="offer-back"
+          tal:define="context_state context/@@plone_context_state;
+                      parent context_state/parent;
+                      parent_url parent/absolute_url">
+            <a href="" tal:attributes="href parent_url">
+               &laquo; Zur&uuml;ck zur &Uuml;bersichtsseite <span tal:content="parent/Title" /></a>
+      </div>
 </div>
 </form>
 

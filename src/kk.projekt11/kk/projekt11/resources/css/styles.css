@@ -5774,19 +5774,28 @@ p {
   margin-bottom: 25px;
   border-radius: 5px !important;
 }
-.offer .offer-back {
+.offer .text {
+  border: 0px solid blue;
+  text-align: left;
+}
+.offer-form {
+  border: 0px solid black;
+  background: #eeeeee;
+  border-radius: 5px;
+  padding: 25px;
+}
+.offer-form h3 {
+  padding-bottom: 25px;
+}
+.offer-back {
   padding: 25px;
   background: #7ca621;
   margin-top: 25px;
   border-radius: 5px !important;
 }
-.offer .offer-back a {
+.offer-back a {
   color: white;
   text-transform: uppercase;
-}
-.offer .text {
-  border: 0px solid blue;
-  text-align: left;
 }
 .fieldErrorBox {
   background-color: #f2dede;

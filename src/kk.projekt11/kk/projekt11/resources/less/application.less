@@ -548,7 +548,28 @@ p {
     border-radius: @border-radius-base !important;
   }
 
-  .offer-back {
+  
+
+  .text {
+    border: 0px solid blue;
+    text-align: left;
+
+  }
+}
+
+.offer-form {
+  border: 0px solid black;
+  background: @gray-lighter;
+  border-radius: @border-radius-base;
+  padding: @line-height-base;
+
+  h3 {
+    padding-bottom: @line-height-base;
+  }
+}
+
+
+.offer-back {
     padding: @line-height-base;
     background: @brand-primary;
     margin-top: @line-height-base;
@@ -559,14 +580,6 @@ p {
       text-transform: uppercase;
     }
   }
-
-  .text {
-    border: 0px solid blue;
-    text-align: left;
-
-  }
-}
-
 .fieldErrorBox {
     background-color: @alert-danger-bg;
     border-color: @alert-danger-border;
