@@ -100,6 +100,23 @@
         </div>
       </div>
 
+      <!--<div class="field">
+       <div class="chk-line" tal:define="chk1 python:request.get('chk1', None)">
+        <input type="checkbox" 
+              name="chk1" 
+              value="1"
+              tal:attributes="checked python:chk1 and True or nothing"/> 
+          Kaufen
+    </div> -->
+      <!--<div class="chk-line" tal:define="chk2 python:request.get('chk1', None)">
+        <input type="checkbox" 
+              name="chk2" 
+              value="1"
+              tal:attributes="checked python:chk2 and True or nothing"/> 
+          Reservierung
+      </div> 
+    </div>-->
+
       <div class="col col-lg-4 send">  
         <input class="btn" type="submit" name="submit" value="absenden" />
         <input class="btn" type="button" value="reset" onclick="this.form.reset()"/>
