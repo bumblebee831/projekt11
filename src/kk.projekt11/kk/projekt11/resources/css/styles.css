@@ -5407,7 +5407,6 @@ p {
 .navbar .nav > li {
   margin: 0px;
   text-align: left !important;
-  background: transparent;
   padding: 0;
   border: 0px solid red;
 }
@@ -5415,10 +5414,14 @@ p {
   color: white;
   text-transform: uppercase;
   font-size: 16px;
+  background: url(../img/bullet.png) no-repeat center right transparent;
 }
 .navbar .nav > li > a:hover {
   color: black;
-  background: transparent;
+  background: url(../img/bullet.png) no-repeat center right transparent;
+}
+#portaltab-impressum a {
+  background: none !important;
 }
 .brand {
   border: 0px solid red;
