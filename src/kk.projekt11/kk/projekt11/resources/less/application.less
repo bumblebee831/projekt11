@@ -29,6 +29,23 @@ body {
   border-bottom: 10px solid @brand-primary;
 }
 
+// RESETS
+
+select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"] {
+    background-color: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    color: #555555;
+    display: block;
+    font-size: 16px;
+    line-height: 25px;
+    min-height: 20px;
+    padding: 8px 12px;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+    vertical-align: middle;
+}
+
 ul, ol {
     margin: 0 0 0 @line-height-base;
     padding: 0;
@@ -518,3 +535,75 @@ p {
     .carousel-caption .btn {
       margin-top: 10px;
     }
+
+
+// SPECIAL OFFER STYLING
+
+.offer {
+  border: 0px solid red;
+
+  .offer-image img {
+    margin-top: @line-height-base;
+    margin-bottom: @line-height-base;
+    border-radius: @border-radius-base !important;
+  }
+
+  .offer-back {
+    padding: @line-height-base;
+    background: @brand-primary;
+    margin-top: @line-height-base;
+    border-radius: @border-radius-base !important;
+
+    a {
+      color: white;
+      text-transform: uppercase;
+    }
+  }
+
+  .text {
+    border: 0px solid blue;
+    text-align: left;
+
+  }
+}
+
+.fieldErrorBox {
+    background-color: @alert-danger-bg;
+    border-color: @alert-danger-border;
+    color: @alert-danger-text;
+    margin-bottom: @line-height-base / 2;
+    font-size: @font-size-small / 1.2;
+    padding: @line-height-base / 2;
+    border-radius: @border-radius-base;
+  }
+
+.send {
+    padding-top: @line-height-base;
+    border: 0px solid blue;
+
+    .btn {
+      border: 0px solid red;
+      width: 100%;
+      margin-bottom: @line-height-base / 2;
+      text-transform: uppercase;
+      background: @brand-primary;
+      vertical-align: middle;
+    }
+  }
+
+/*.moebel {
+  border: 0px solid red;
+  width: 320px;
+  display: block;
+  position: relative;
+}
+
+.moebel img,
+.leuchten img,
+.outdoor img,
+.teppiche img {
+  border: 0px solid red;
+  width: 320px !important;
+  clear: both;
+  overflow: hidden !important;
+}*/

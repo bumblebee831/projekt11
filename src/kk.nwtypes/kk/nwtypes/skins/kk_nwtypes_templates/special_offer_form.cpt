@@ -1,0 +1,119 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="kk.chproducts">
+
+<body>
+
+<metal:content-core fill-slot="content-core">
+<metal:block define-macro="content-core">
+<div class="offer">
+      <div class="offer-back"
+          tal:define="context_state context/@@plone_context_state;
+                      parent context_state/parent;
+                      parent_url parent/absolute_url">
+            <a href="" tal:attributes="href parent_url">
+               &laquo; Zur&uuml;ck zur &Uuml;bersicht <span tal:content="parent/Title" /></a>
+      </div>
+      <div class="offer-image">
+    <tal:x tal:replace="structure python:context.tag(scale='custom')" />
+  </div>
+<div class="text" tal:content="structure context/getText"></div>
+</div>
+<form tal:define="errors options/state/getErrors"
+           tal:attributes="action string:${here/absolute_url}/${template/id};"
+          method="post" class="nwcontact">
+          <input type="hidden" name="form.submitted" value="1" />
+       <div metal:define-macro="basic-form">
+<div class="offer-form">
+  <div class="container">
+    <div class="row">
+
+      <div class="col col-lg-4">
+        <div class="field">
+          <label class="formQuestion" for="name">Name <span class="required"></span></label>
+            <div class="fieldErrorBox" tal:define="name errors/name|nothing" tal:condition="name" tal:content="name" />
+            <input type="text"
+              name="name"
+              tal:define="val request/name|nothing"
+              tal:attributes="value val" />
+          </div>
+
+        <div class="field">
+          <label class="formQuestion" for="phone">Telefon <span class="required"></span></label>
+            <div class="fieldErrorBox" tal:define="phone errors/phone|nothing" tal:condition="phone" tal:content="phone" />
+            <input type="text"
+              name="phone"
+              tal:define="val request/phone|nothing"
+              tal:attributes="value val" />
+        </div>
+      </div>
+
+      <div class="col col-lg-4">
+        <div class="field">
+          <label class="formQuestion" for="street">Strasse/Nr. <span class="required"></span></label>
+            <div class="fieldErrorBox" tal:define="street errors/street|nothing" tal:condition="street" tal:content="street" />
+            <input type="text"
+              name="street"
+              tal:define="val request/street|nothing"
+              tal:attributes="value val" />
+        </div>
+
+        <div class="field">
+          <label class="formQuestion" for="email">Ihre E-mail Adresse <span class="required"></span></label>
+            <div class="fieldErrorBox" tal:define="email errors/email|nothing" tal:condition="email" tal:content="email" />
+            <input type="text"
+               name="email"
+               tal:define="val request/email|nothing"
+               tal:attributes="value val" />
+        </div>
+      </div>
+
+
+      <div class="col col-lg-4">
+        <div class="field">
+          <label class="formQuestion" for="plzort">PLZ / Ort <span class="required"></span></label>
+            <div class="fieldErrorBox" tal:define="plzort errors/plzort|nothing" tal:condition="plzort" tal:content="plzort" />
+            <input type="text"
+               name="plzort"
+               tal:define="val request/plzort|nothing"
+               tal:attributes="value val" />
+        </div>
+
+          <div class="field">
+            <label class="formQuestion" for="betreff">Betreff <span class="required"></span></label>
+              <div class="fieldErrorBox" tal:define="betreff errors/betreff|nothing" tal:condition="betreff" tal:content="betreff" />
+              <input type="text"
+               name="betreff"
+               tal:define="val request/betreff|nothing"
+               tal:attributes="value val" />
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col col-lg-8">
+        <div class="field-text">
+            <label class="formQuestion" for="betreff">Nachricht</label>
+          <textarea name="message" tal:define="val request/message|nothing" tal:content="val"></textarea>
+        </div>
+      </div>
+
+      <div class="col col-lg-4 send">  
+        <input class="btn" type="submit" name="submit" value="absenden" />
+        <input class="btn" type="button" value="reset" onclick="this.form.reset()"/>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+</form>
+
+</metal:block>
+</metal:content-core>
+
+</body>
+</html>
