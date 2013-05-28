@@ -5339,11 +5339,6 @@ table.grid th {
   font-family: 'redactedregular';
   color: #555555;
 }
-body {
-  background: url(../img/bg.png) repeat left top #f4f4f4;
-  border-top: 10px solid #7ca621;
-  border-bottom: 10px solid #7ca621;
-}
 select,
 textarea,
 input[type="text"],
@@ -5388,6 +5383,11 @@ dd {
 dl {
   margin-bottom: 25px;
 }
+body {
+  background: url(../img/bg.png) repeat left top #f4f4f4 fixed;
+  border-top: 10px solid #7ca621;
+  border-bottom: 10px solid #7ca621;
+}
 .wrapper {
   width: 100%;
 }
@@ -5409,8 +5409,15 @@ p {
   border: 0px solid red;
   padding: 0;
 }
-.row {
+#content #viewlet-above-content-title {
+  display: none;
+}
+.brand {
   border: 0px solid red;
+  line-height: 25px;
+  width: 425px;
+  padding: 0;
+  margin: 25px 0 0 0;
 }
 .navbar-toggle {
   margin-bottom: 100px !important;
@@ -5452,22 +5459,6 @@ p {
 #portaltab-impressum a {
   background: none !important;
 }
-.brand {
-  border: 0px solid red;
-  line-height: 25px;
-  width: 425px;
-  padding: 0;
-  margin: 25px 0 0 0;
-}
-.section-text-will-toene .selected {
-  background: #016277 !important;
-}
-.section-fakstheater .selected {
-  background: #ff6c00 !important;
-}
-.section-andraerecords .selected {
-  background: #339900 !important;
-}
 .selected a {
   color: black !important;
 }
@@ -5485,21 +5476,21 @@ p {
 .actionMenuContent {
   z-index: 100000 !important;
 }
+#content-views {
+  margin: 0px;
+}
 #intro {
   border: 0px solid red;
   padding: 25px 0;
 }
 #intro .col {
-  border: 0px solid red;
   padding-left: 0px;
   padding-right: 0px;
 }
 #intro .first {
-  border: 0px solid red;
   padding-right: 25px;
 }
 #intro .second {
-  border: 0px solid red;
   padding-right: 15px;
 }
 #intro .last {
@@ -5533,50 +5524,10 @@ p {
   font-size: 13.333333333333334px;
   text-transform: uppercase;
 }
-#content #viewlet-above-content-title {
-  display: none;
-}
-#content-views {
-  margin: 0px;
-}
-#brand {
-  padding: 12.5px 25px 25px 25px;
-  display: inline-block;
-  width: 100%;
-  border-radius: 0px 0px 5px 5px;
-}
-.section-text-will-toene #brand {
-  background: #016277;
-}
-.section-fakstheater #brand {
-  background: #ff6c00;
-}
-.section-andraerecords #brand {
-  background: #339900;
-}
-.logo {
-  vertical-align: bottom;
-  border: 0px solid red;
-}
-.claim {
-  vertical-align: bottom !important;
-  border: 0px solid red;
-  text-transform: uppercase;
-  color: white;
-  font-size: 13px;
-  margin-top: 50px;
-  line-height: 12.5px;
-}
-.claim a {
-  color: white;
-}
-.claim a:hover {
-  text-decoration: none;
-}
 #content {
-  border: 0px solid red;
-  background: white !important;
+  background: white;
   margin-top: 0;
+  margin-bottom: 12.5px;
   border-radius: 5px;
   padding: 25px;
 }
@@ -5663,15 +5614,6 @@ p {
 .portletNavigationTree .contenttype-formfolder img {
   display: none;
 }
-.section-text-will-toene .navTreeCurrentNode {
-  background: #016277 !important;
-}
-.section-fakstheater .navTreeCurrentNode {
-  background: #ff6c00 !important;
-}
-.section-andraerecords .navTreeCurrentNode {
-  background: #339900 !important;
-}
 .copy {
   background: #7ca621;
   padding: 12.5px 25px;
@@ -5707,8 +5649,6 @@ p {
 #site-footer a {
   text-transform: uppercase;
 }
-/* CUSTOMIZE THE CAROUSEL
-    -------------------------------------------------- */
 /* Carousel base class */
 .carousel {
   margin-bottom: 25px;
@@ -5824,40 +5764,43 @@ p {
 .moebel,
 .leuchten,
 .accessoires {
-  border: 0px solid red;
-  width: 320px;
+  width: 432px;
   display: block;
   position: relative;
 }
 .moebel img,
 .leuchten img,
 .accessoires img {
-  border: 0px solid red;
-  width: 320px !important;
+  width: 432px !important;
   clear: both;
   overflow: hidden !important;
 }
-/**** Isotope Filtering ****/
 .isotope-item {
   z-index: 2;
-  margin: 0px 5px 5px 0px;
-  border: 1px solid red;
+  margin: 0px 12.5px 12.5px 0px;
+  border: 0px solid red;
   padding: 0px;
+  border-radius: 5px;
 }
 .isotope-item img {
   border: 0px;
-  width: 340px;
+  border-radius: 5px 5px 0 0;
 }
 .isotope-hidden.isotope-item {
   pointer-events: none;
   z-index: 1;
 }
 .underline {
-  font-size: 0.7em;
+  font-size: 16px;
   border: 0px solid red;
-  line-height: 1.4em;
+  line-height: 25px;
+  padding: 12.5px;
+  background: #7ca621;
+  border-radius: 0 0 5px 5px;
 }
-/**** Isotope CSS3 transitions ****/
+.underline a {
+  color: white;
+}
 .isotope,
 .isotope .isotope-item {
   -webkit-transition-duration: 0.8s;
@@ -5880,7 +5823,6 @@ p {
   -o-transition-property: top, left, opacity;
   transition-property: transform, opacity;
 }
-/**** disabling Isotope CSS3 transitions ****/
 .isotope.no-transition,
 .isotope.no-transition .isotope-item,
 .isotope .isotope-item.no-transition {
@@ -5890,14 +5832,42 @@ p {
   -o-transition-duration: 0s;
   transition-duration: 0s;
 }
-#isotope-container .item {
-  margin: 0px 5px 30px 0px;
-  float: left;
-  clear: right;
-  width: 320px;
-  height: 50%;
+#sub {
+  border: 0px solid red !important;
+  margin-top: 0 !important;
+  margin-bottom: 12.5px;
+  padding: 12.5px 0;
+  background: transparent;
+  border-radius: 5px !important;
 }
-#isotope-container .item img {
-  width: 100%;
-  height: 100%;
+#sub a {
+  color: white;
+  text-transform: uppercase;
+  background: #999999;
+  padding: 12.5px;
+  border-radius: 5px !important;
+  font-size: 10.769230769230768px;
+  text-decoration: none;
+}
+#sub a:hover {
+  color: black;
+  background: #7ca621;
+}
+#sub .active {
+  background: #7ca621;
+}
+#sub .portletFilterNavigationPortlet {
+  border: 0px solid red;
+  margin: 0px;
+}
+#sub .portletFilterNavigationPortlet .portletHeader {
+  display: none;
+}
+#sub .navTree {
+  margin-left: 0 !important;
+}
+#sub .navTree li {
+  display: inline;
+  border: 0px solid blue !important;
+  margin: 0 25px 0 0;
 }

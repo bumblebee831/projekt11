@@ -10,6 +10,8 @@
     <!--<theme href="minimal.html" if-path="@@edit-tile" />-->
 
     <theme href="frontpage.html" css:if-content="body.section-front-page" />
+    <theme href="offer.html" css:if-content="body.section-sonderverkauf" />
+    
     
     <!-- Rules applying to a standard Plone web page -->
     <rules css:if-content="#visual-portal-wrapper">
@@ -91,7 +93,7 @@
         <replace css:content-children="#portal-column-one > *"
             css:theme-children="#sidebar-left" />
         <replace css:content-children="#portal-column-two > *"
-            css:theme-children="#sidebar-right" />
+            css:theme-children="#sub" />
 
     </rules>
 

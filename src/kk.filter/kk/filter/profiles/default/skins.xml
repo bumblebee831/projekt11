@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<object name="portal_skins" allow_any="False" cookie_persistence="False"
+   default_skin="Custom Theme">
+
+ <object name="kk_nwtheme_custom_images"
+    meta_type="Filesystem Directory View"
+    directory="kk.filter:skins/kk_nwtheme_custom_images"/>
+ <object name="kk_nwtheme_custom_templates"
+    meta_type="Filesystem Directory View"
+    directory="kk.filter:skins/kk_nwtheme_custom_templates"/>
+ <object name="kk_nwtheme_styles"
+    meta_type="Filesystem Directory View"
+    directory="kk.filter:skins/kk_nwtheme_styles"/>
+
+ <skin-path name="Custom Theme" based-on="Sunburst Theme">
+  <layer name="kk_nwtheme_custom_images"
+     insert-after="custom"/>
+  <layer name="kk_nwtheme_custom_templates"
+     insert-after="kk_nwtheme_custom_images"/>
+  <layer name="kk_nwtheme_styles"
+     insert-after="kk_nwtheme_custom_templates"/>
+ </skin-path>
+
+</object>
