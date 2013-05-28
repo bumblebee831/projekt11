@@ -5481,22 +5481,24 @@ p {
 }
 #intro {
   border: 0px solid red;
-  padding: 25px 0;
+  padding: 12.5px 0;
 }
 #intro .col {
-  padding-left: 0px;
-  padding-right: 0px;
+  padding: 0px;
+  width: 32%;
 }
 #intro .first {
-  padding-right: 25px;
+  margin-left: 0px;
+  border: 0px solid red;
 }
 #intro .second {
-  padding-right: 15px;
+  border: 0px solid red;
+  margin-left: 18px;
+  margin-right: 18px;
 }
 #intro .last {
+  margin-left: 0;
   border: 0px solid red;
-  padding-right: 0px;
-  padding-left: 10px;
 }
 .box {
   padding: 12.5px;
@@ -5870,4 +5872,27 @@ p {
   display: inline;
   border: 0px solid blue !important;
   margin: 0 25px 0 0;
+}
+@media screen and (max-device-width: 320px) and (orientation: portrait) {
+  #intro {
+    border: 0px solid red;
+    padding: 12.5px 0;
+  }
+  #intro .col {
+    padding: 12.5px;
+    width: 100%;
+  }
+  #intro .first {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  #intro .second {
+    border: 0px solid red;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  #intro .last {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
 }
